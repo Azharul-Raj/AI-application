@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import {  Poppins } from 'next/font/google'
 import styles from '../styles/custom.module.css'
 import React, { useState } from 'react'
 import Card from '@/components/Card'
@@ -8,7 +8,7 @@ import 'react-photo-view/dist/react-photo-view.css';
 import Spinner from '@/components/Spinner'
 import Header from '@/components/Header'
 
-const inter = Inter({ subsets: ['latin'] })
+
 
 export default function Home() {
   const [images,setImages]=useState([]);
@@ -30,9 +30,9 @@ export default function Home() {
     e.target.reset()
   }
   return (
-    <main className=''>
-      <Header/>
-      <div className="pt-24 px-[20%]">
+    <main >
+      {/* <Header/> */}
+      <div className="pt-24 px-10 md:px-[20%]">
         {/* input field */}
         <form onSubmit={handleSubmit} action="" className={`flex rounded-[10px]  ${styles.customShadow}`}>
           <input className='w-full text-gray-700 pl-5 focus:outline-none p-[12px' placeholder='Generate your desired images' type="text" name="prompt" id="" />
