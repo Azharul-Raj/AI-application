@@ -6,7 +6,6 @@ import Card from '@/components/Card'
 import {PhotoProvider} from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 import Spinner from '@/components/Spinner'
-import Header from '@/components/Header'
 
 
 
@@ -14,6 +13,7 @@ export default function Home() {
   const [images,setImages]=useState([]);
   const handleSubmit=(e:React.ChangeEvent<HTMLFormElement>)=>{
     e.preventDefault();
+    e.target.prompt.value
     fetch(`/api/generateImage`,{
       method:"POST",
       headers:{
