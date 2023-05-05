@@ -1,17 +1,21 @@
+import { useUser } from '@auth0/nextjs-auth0/client';
 import Link from 'next/link';
 import React from 'react'
 
 function Header() {
+    const {user,isLoading,error}=useUser()
+    // console.log(user);
+    
     return (
         <nav className="fixed z-10 w-full bg-white dark:bg-gray-300 md:absolute md:bg-transparent md:border">
             <div className="container m-auto px-2 md:px-12 lg:px-7">
                 <div className="flex flex-wrap items-center justify-between py-3 gap-6 md:py-4 md:gap-0">
                     <input type="checkbox" name="toggle_nav" id="toggle_nav" className="peer hidden" />
                     <div className="w-full px-6 flex justify-between lg:w-max md:px-0 z-30">
-                        <a href="#" aria-label="logo" className="flex space-x-2 items-center">
+                        <Link href="/" aria-label="logo" className="flex space-x-2 items-center">
                             <img src="ai.png" className="w-12" alt="tailus logo" width="144" height="60" />
                             <span className="text-2xl font-bold text-yellow-900 dark:text-gray-900">AI-<span className="text-yellow-700 dark:text-yellow-300">TOOLS</span></span>
-                        </a>
+                        </Link>
 
                         <div className="flex items-center lg:hidden max-h-10">
                             <label role="button" htmlFor="toggle_nav" aria-label="humburger" id="hamburger" className="relative w-10 h-auto p-2">
@@ -30,8 +34,13 @@ function Header() {
                             <ul className="tracking-wide font-medium  text-sm 
                         flex flex-col gap-y-6 lg:gap-y-0 lg:flex-row w-full">
                                 <li>
-                                    <Link href="/CV" className="block md:px-4 transition dark:text-gray-900 dark:hover:text-yellow-300 hover:text-yellow-700">
+                                    <Link href={`${"/CV"}`} className="block md:px-4 transition dark:text-gray-900 dark:hover:text-yellow-300 hover:text-yellow-700">
                                         <span>CV Writing</span>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href={`${"/ImageGenerator"}`} className="block md:px-4 transition dark:text-gray-900 dark:hover:text-yellow-300 hover:text-yellow-700">
+                                        <span>Image Generator</span>
                                     </Link>
                                 </li>
                                 <li>
