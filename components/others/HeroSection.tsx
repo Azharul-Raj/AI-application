@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image';
 import Container from './Container';
 
 import microsoft from '../../assets/clients/microsoft.svg';
@@ -7,7 +8,6 @@ import google from '../../assets/clients/google.svg';
 import ge from '../../assets/clients/ge.svg';
 import netflix from '../../assets/clients/netflix.svg';
 import googleCloud from '../../assets/clients/google-cloud.svg';
-import Image from 'next/image';
 
 
 function HeroSection() {
