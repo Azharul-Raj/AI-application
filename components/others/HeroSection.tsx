@@ -8,6 +8,7 @@ import google from '../../assets/clients/google.svg';
 import ge from '../../assets/clients/ge.svg';
 import netflix from '../../assets/clients/netflix.svg';
 import googleCloud from '../../assets/clients/google-cloud.svg';
+import Marquee from 'react-fast-marquee';
 
 
 function HeroSection() {
@@ -56,7 +57,9 @@ function HeroSection() {
                             </div>
                         </div>
                     </div>
-                    <div className="mt-12 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6">
+                    {/* <div className="mt-12 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6"> */}
+                    <Marquee speed={100} direction='right'>
+                        <div className="mt-12 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6">
                         <div className="p-4 grayscale-0 transition duration-200 ">
                             <Image src={microsoft} className="h-12 w-auto mx-auto" loading="lazy" alt="client logo"  />
                         </div>
@@ -75,7 +78,8 @@ function HeroSection() {
                         <div className="p-4 grayscale-0 transition duration-200 ">
                             <Image src={googleCloud} className="h-12 w-auto mx-auto" loading="lazy" alt="client logo"  />
                         </div>
-                    </div>
+                        </div>
+                    </Marquee>
                 </div>
             </Container>
         </div>

@@ -12,6 +12,7 @@ import Stats from '@/components/others/Stats'
 import Testimonials from '@/components/others/Testimonials'
 import CallToAction from '@/components/others/CallToAction'
 import Blog from '@/components/others/Blog'
+import Pricing from '@/components/Pricing'
 
 
 
@@ -19,6 +20,7 @@ export default function Home() {
   return(
     <main className=''>
       <HeroSection/>
+      <Pricing/>
 		<Features/>
 		<Stats/>
 		<Testimonials/>
