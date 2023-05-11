@@ -3,6 +3,7 @@ import { Poppins } from 'next/font/google';
 import { UserProvider } from '@auth0/nextjs-auth0/client'
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
+import InfoProvider from '@/contexts/InfoProvider';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -13,8 +14,10 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className={poppins.className}>
       <UserProvider>
+        <InfoProvider>
         <Header />
         <Component {...pageProps} />
+        </InfoProvider>
       </UserProvider>
     </div>
   )

@@ -40,3 +40,27 @@ export const years=[
         experience:"more than 5yr"
     },
 ]
+
+export const priceData=[
+    {
+        id:1,
+        plan:"Basic",
+        advantage:["First advantage","Second advantage","Third advantage"],
+        price:"100",
+        priceId:process.env.NEXT_PUBLIC_BASIC_PRICE_ID
+    },
+    {
+        id:2,
+        plan:"Standard",
+        advantage:["First advantage","Second advantage","Third advantage"],
+        price:"150",
+        priceId:process.env.NEXT_PUBLIC_STANDARD_PRICE_ID
+    },
+    {
+        id:3,
+        plan:"Premium",
+        advantage:["First advantage","Second advantage","Third advantage"],
+        price:"200",
+        priceId:process.env.NEXT_PUBLIC_PREMIUM_PRICE_ID
+    },
+]
